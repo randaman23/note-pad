@@ -9,7 +9,7 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="app_main">
         <HashRouter>
           <Switch>
             <Route path="/" exact component={Home} />
