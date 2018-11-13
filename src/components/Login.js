@@ -13,7 +13,7 @@ class Login extends Component {
       <div>
         <h1>Login</h1>
         <input type="email" />
-        <input type="text" />
+        <input type="password" />
         <button>Sign In</button>
       </div>
     );

@@ -8,12 +8,25 @@ class Register extends Component {
       password: ""
     };
   }
+
+  handleEmail(e) {
+    this.setState({
+      email: e.target.value
+    });
+  }
+
+  handlePassword(e) {
+    this.setState({
+      password: e.target.value
+    });
+  }
+
   render() {
     return (
       <div>
         <h1>Register</h1>
-        <input type="email" />
-        <input type="text" />
+        <input type="email" onChange={e => this.handleEmail(e)} />
+        <input type="password" onChange={e => this.handlePassword(e)} />
         <button>Register</button>
       </div>
     );
