@@ -1,0 +1,27 @@
+.home_main{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.home_header{
+    height: 12vh;
+    width: 100vw;
+    background: #a179af;
+    position: fixed;
+    border-radius: 2px;
+}
+.home_header h1{
+    margin-left: 20px;
+}
+.pushdown{
+    height: 15vh;
+}
+
+.signin{
+    height: 40vh;
+    width: 100vw;
+    background-image: url('https://cdn-images-1.medium.com/max/1600/1*I-p02fB1tRkSwME11T95vg.jpeg');
+    background-size: cover;
+    background-position: center;
+}
