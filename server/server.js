@@ -1,8 +1,9 @@
 require("dotenv").config();
 const express = require("express"),
   massive = require("massive"),
-  bcrypt = require("bcryptjs");
-controller = require("./controller");
+  session = require("express-session"),
+  bcrypt = require("bcryptjs"),
+  controller = require("./controller");
 
 const { SERVER_PORT, CONNECTION_STRING } = process.env;
 
@@ -15,7 +16,7 @@ massive(CONNECTION_STRING).then(db => {
 
 app.use(express.json());
 
-app.post(`/api/createuser`, controller.createUser)
+app.post(`/api/createuser`, controller.createUser);
 
 app.listen(SERVER_PORT, () => {
   console.log(`Hoi from port ${SERVER_PORT}`);
