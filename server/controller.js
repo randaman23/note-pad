@@ -16,5 +16,14 @@ module.exports = {
   async login(req, res) {
     const db = req.app.get("db");
     const { email, password } = req.body;
+    let foundUser = await db.check_email([email]);
+    if (!foundUser[0]) return res.status(200).send("Email does not exist");
+    let result = bcrypt.compareSync(password, foundUser[0].user_password);
+    if (result) {
+      req.session.user = foundUser[0];
+      res.status(200).send(req.session.user);
+    } else {
+      res.status(401).send("Email or Password Incorrect");
+    }
   }
 };
