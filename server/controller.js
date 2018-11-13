@@ -10,12 +10,6 @@ module.exports = {
     let hash = bcrypt.hashSync(password, salt);
     let user = db.create_user([email, hash]);
     req.session.user = user[0];
-    res
-      .status(200)
-      .send(req.session.user)
-      .catch(err => {
-        console.log(err);
-        res.status(500).send(err);
-      });
+    res.status(200).send(req.session.user);
   }
 };

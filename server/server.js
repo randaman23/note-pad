@@ -2,10 +2,9 @@ require("dotenv").config();
 const express = require("express"),
   massive = require("massive"),
   session = require("express-session"),
-  bcrypt = require("bcryptjs"),
   controller = require("./controller");
 
-const { SERVER_PORT, CONNECTION_STRING } = process.env;
+const { SERVER_PORT, CONNECTION_STRING, SECRET } = process.env;
 
 const app = express();
 
@@ -15,6 +14,14 @@ massive(CONNECTION_STRING).then(db => {
 });
 
 app.use(express.json());
+
+app.use(
+  session({
+    secret: SECRET,
+    resave: false,
+    saveUninitialized: false
+  })
+);
 
 app.post(`/api/createuser`, controller.createUser);
 
