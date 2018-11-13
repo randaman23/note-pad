@@ -29,7 +29,8 @@ class Login extends Component {
     axios.post("/auth/login", { email, password }).then(res => {
       console.log(res.data);
       this.props.history.push("/notepad");
-    });
+    })
+    .catch(err => alert('Email or Password incorrect.'))
   }
 
   render() {
@@ -47,7 +48,7 @@ class Login extends Component {
           placeholder="Password"
           onChange={e => this.handlePassword(e)}
         />
-        <br/>
+        <br />
         <button onClick={e => this.login(e)}>Sign In</button>
       </div>
     );

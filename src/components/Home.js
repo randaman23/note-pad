@@ -9,9 +9,9 @@ class Home extends Component {
         <div className="home_header">
           <h1>Thought Jotter</h1>
         </div>
-        <div className="pushdown"></div>
-        <div></div>
-        <div className="signin">
+        <div className="pushdown" />
+        <div className="signin" />
+        <div>
           <h1>Login or Register</h1>
           <Link to="/login">
             <button>Sign In</button>

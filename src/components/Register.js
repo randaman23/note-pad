@@ -24,10 +24,13 @@ class Register extends Component {
 
   register() {
     const { email, password } = this.state;
-    axios.post("/api/createuser", { email, password }).then(res => {
-      console.log(res.data);
-      this.props.history.push("/notepad");
-    });
+    axios
+      .post("/api/createuser", { email, password })
+      .then(res => {
+        console.log(res.data);
+        this.props.history.push("/notepad");
+      })
+      .catch(err => alert("This Email is already Registered with an Account."));
   }
 
   render() {
@@ -45,7 +48,7 @@ class Register extends Component {
           placeholder="Password"
           onChange={e => this.handlePassword(e)}
         />
-        <br/>
+        <br />
         <button onClick={e => this.register(e)}>Register</button>
       </div>
     );
