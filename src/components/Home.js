@@ -13,13 +13,15 @@ class Home extends Component {
         <div className="pushdown" />
         <div className="signin" />
         <div className="register">
-          <h1>Login or Register</h1>
-          <Link to="/login">
-            <button>Sign In</button>
-          </Link>
-          <Link to="/register">
-            <button>Register</button>
-          </Link>
+          <div className="in_register">
+            <h1>Login or Register</h1>
+            <Link to="/login">
+              <button>Sign In</button>
+            </Link>
+            <Link to="/register">
+              <button>Register</button>
+            </Link>
+          </div>
         </div>
         <img src={pen} alt="" width="100%" />
       </div>
