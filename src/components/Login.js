@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from 'axios'
 
 class Login extends Component {
   constructor(props) {
@@ -21,13 +22,17 @@ class Login extends Component {
     });
   }
 
+  login() {
+    axios.post()
+  }
+
   render() {
     return (
       <div>
         <h1>Login</h1>
-        <input type="email" />
-        <input type="password" />
-        <button>Sign In</button>
+        <input type="email" onChange={e => this.handleEmail(e)} />
+        <input type="password" onChange={e => this.handlePassword(e)} />
+        <button onClick={e => this.login(e)}>Sign In</button>
       </div>
     );
   }

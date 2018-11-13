@@ -24,6 +24,7 @@ app.use(
 );
 
 app.post(`/api/createuser`, controller.createUser);
+app.post(`/auth/login`, controller.login)
 
 app.listen(SERVER_PORT, () => {
   console.log(`Hoi from port ${SERVER_PORT}`);

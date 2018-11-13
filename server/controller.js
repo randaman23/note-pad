@@ -11,5 +11,10 @@ module.exports = {
     let user = await db.create_user([email, hash]);
     req.session.user = user[0];
     res.status(200).send(req.session.user);
+  },
+
+  async login(req, res) {
+    const db = req.app.get("db");
+    const { email, password } = req.body;
   }
 };
