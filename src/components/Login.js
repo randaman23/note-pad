@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from 'axios'
+import axios from "axios";
 
 class Login extends Component {
   constructor(props) {
@@ -23,15 +23,31 @@ class Login extends Component {
   }
 
   login() {
-    axios.post()
+    const { email, password } = this.state;
+    if (!this.state.email || !this.state.password)
+      return alert(`Please enter credentials.`);
+    axios.post("/auth/login", { email, password }).then(res => {
+      console.log(res.data);
+      this.props.history.push("/notepad");
+    });
   }
 
   render() {
     return (
-      <div>
+      <div className="register_login">
         <h1>Login</h1>
-        <input type="email" onChange={e => this.handleEmail(e)} />
-        <input type="password" onChange={e => this.handlePassword(e)} />
+        <input
+          type="email"
+          placeholder="Email"
+          onChange={e => this.handleEmail(e)}
+        />
+        <br />
+        <input
+          type="password"
+          placeholder="Password"
+          onChange={e => this.handlePassword(e)}
+        />
+        <br/>
         <button onClick={e => this.login(e)}>Sign In</button>
       </div>
     );

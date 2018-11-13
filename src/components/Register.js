@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from 'axios'
+import axios from "axios";
 
 class Register extends Component {
   constructor(props) {
@@ -21,21 +21,31 @@ class Register extends Component {
       password: e.target.value
     });
   }
-  
-  register(){
-    const {email, password} = this.state
-    axios.post('/api/createuser', {email, password}).then(res => {
-      console.log(res.data)
-      this.props.history.push('/notepad')
-    })
+
+  register() {
+    const { email, password } = this.state;
+    axios.post("/api/createuser", { email, password }).then(res => {
+      console.log(res.data);
+      this.props.history.push("/notepad");
+    });
   }
 
   render() {
     return (
-      <div>
+      <div className="register_login">
         <h1>Register</h1>
-        <input type="email" onChange={e => this.handleEmail(e)} />
-        <input type="password" onChange={e => this.handlePassword(e)} />
+        <input
+          type="email"
+          placeholder="Email"
+          onChange={e => this.handleEmail(e)}
+        />
+        <br />
+        <input
+          type="password"
+          placeholder="Password"
+          onChange={e => this.handlePassword(e)}
+        />
+        <br/>
         <button onClick={e => this.register(e)}>Register</button>
       </div>
     );
