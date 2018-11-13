@@ -26,11 +26,13 @@ class Login extends Component {
     const { email, password } = this.state;
     if (!this.state.email || !this.state.password)
       return alert(`Please enter credentials.`);
-    axios.post("/auth/login", { email, password }).then(res => {
-      console.log(res.data);
-      this.props.history.push("/notepad");
-    })
-    .catch(err => alert('Email or Password incorrect.'))
+    axios
+      .post("/auth/login", { email, password })
+      .then(res => {
+        console.log(res.data);
+        this.props.history.push("/notepad");
+      })
+      .catch(err => alert("Email or Password incorrect."));
   }
 
   render() {

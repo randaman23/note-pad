@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import pen from "../images/notebook_write_watch_pen_67636_1920x1080.jpg";
 import "./Home.css";
 
 class Home extends Component {
@@ -11,7 +12,7 @@ class Home extends Component {
         </div>
         <div className="pushdown" />
         <div className="signin" />
-        <div>
+        <div className="register">
           <h1>Login or Register</h1>
           <Link to="/login">
             <button>Sign In</button>
@@ -20,6 +21,7 @@ class Home extends Component {
             <button>Register</button>
           </Link>
         </div>
+        <img src={pen} alt="" width="100%" />
       </div>
     );
   }

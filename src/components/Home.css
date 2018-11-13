@@ -25,3 +25,11 @@
     background-size: cover;
     background-position: center;
 }
+.register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    /* position: fixed; */
+}
+
