@@ -8,6 +8,19 @@ class Login extends Component {
       password: ""
     };
   }
+
+  handleEmail(e) {
+    this.setState({
+      email: e.target.value
+    });
+  }
+
+  handlePassword(e) {
+    this.setState({
+      password: e.target.value
+    });
+  }
+
   render() {
     return (
       <div>
