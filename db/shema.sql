@@ -13,3 +13,6 @@ user_id int references users(user_id),
 note_content text,
 trash boolean 
 )
+
+insert into note(user_id, note_content, trash)
+values(1, 'notes', 'false')

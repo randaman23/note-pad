@@ -25,5 +25,10 @@ module.exports = {
     } else {
       res.status(401).send("Email or Password Incorrect");
     }
+  },
+
+  async userData(req, res) {
+    const db = req.app.get("db")
+    let user = await db.get_user(req.session.user.user_id)
   }
 };
