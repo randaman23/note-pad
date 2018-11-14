@@ -16,6 +16,7 @@ class Notepad extends Component {
     return (
       <div>
         <h1>Notepad</h1>
+        <button>Sign Out</button>
       </div>
     );
   }

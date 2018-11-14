@@ -17,7 +17,7 @@ module.exports = {
     const db = req.app.get("db");
     const { email, password } = req.body;
     let foundUser = await db.check_email([email]);
-    if (!foundUser[0]) return res.status(200).send("Email does not exist");
+    if (!foundUser[0]) return res.status(400).send("Email does not exist");
     let result = bcrypt.compareSync(password, foundUser[0].user_password);
     if (result) {
       req.session.user = foundUser[0];
@@ -28,7 +28,9 @@ module.exports = {
   },
 
   async userData(req, res) {
-    const db = req.app.get("db")
-    let user = await db.get_user(req.session.user.user_id)
+    const db = req.app.get("db");
+    let userNotes = await db.get_user(req.session.user.user_id);
+    console.log(req.session.user.user_id)
+    res.status(200).send(userNotes);
   }
 };
