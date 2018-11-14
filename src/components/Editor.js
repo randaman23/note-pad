@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import ReactDOM from "react-dom";
 import { Editor, EditorState, RichUtils } from "draft-js";
 import "draft-js/dist/Draft.css";
+import axios from 'axios'
 
 class MyEditor extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class MyEditor extends Component {
   }
 
   componentDidMount() {
+    axios.get('/api/user-data').then(res => console.log(res.data))
     this.focusEditor();
   }
 
@@ -37,6 +39,7 @@ class MyEditor extends Component {
   }
 
   render() {
+      console.log(this.state)
     return (
       <div style={styles.editor} onClick={this.focusEditor}>
         <button onClick={this._onBoldClick.bind(this)}>Bold</button>
@@ -54,7 +57,7 @@ class MyEditor extends Component {
 const styles = {
   editor: {
     border: "1px solid gray",
-    minHeight: "6em"
+    minHeight: "20em"
   }
 };
 
