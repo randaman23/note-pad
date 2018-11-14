@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Notepad from "./components/Notepad";
+import MyEditor from "./components/Editor";
 import "./App.css";
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/notepad" component={Notepad} />
+            <Route path="/editor" component={MyEditor} />
           </Switch>
         </HashRouter>
       </div>
