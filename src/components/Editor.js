@@ -40,7 +40,7 @@ class MyEditor extends Component {
   }
 
   _onBoldClick() {
-    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState), "BOLD");
+    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, "BOLD"));
   }
 
   render() {

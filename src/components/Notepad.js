@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import axios from 'axios'
+// import axios from "axios";
+import { connect } from "react-redux";
 
 class Notepad extends Component {
   constructor(props) {
@@ -7,12 +8,10 @@ class Notepad extends Component {
     this.state = {};
   }
 
-  componentDidMount(){
-    axios.get('/api/user-data').then(res => console.log(res.data))
-  }
-
-
   render() {
+    let userNotes = this.props.state.notes.map((val, i) => {
+      return <div>{console.log(userNotes)}</div>;
+    });
     return (
       <div>
         <h1>Notepad</h1>
@@ -22,4 +21,10 @@ class Notepad extends Component {
   }
 }
 
-export default Notepad;
+function mapStateToProps(state) {
+  return {
+    notes: state.notes
+  };
+}
+
+export default connect(mapStateToProps)(Notepad);
