@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Editor, EditorState, RichUtils } from "draft-js";
 import "draft-js/dist/Draft.css";
 import { connect } from "react-redux";
-import getUserNotes from "../ducks/reducer";
+import { getUserNotes } from "../ducks/reducer";
 import axios from "axios";
 
 class MyEditor extends Component {
@@ -73,4 +73,4 @@ function mapStateToProps(state) {
 }
 
 // ReactDOM.render(<MyEditor />, document.getElementById("container"));
-export default connect(mapStateToProps)(MyEditor);
+export default connect(mapStateToProps, {getUserNotes})(MyEditor);

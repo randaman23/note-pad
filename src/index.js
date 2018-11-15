@@ -5,9 +5,10 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "draft-js/dist/Draft.css";
 import { Provider } from "react-redux";
+import store from './ducks/store'
 
 ReactDOM.render(
-  <Provider>
+  <Provider store = {store}>
     <App />
   </Provider>,
   document.getElementById("root")
