@@ -2,7 +2,9 @@ import React, { Component } from "react";
 // import ReactDOM from "react-dom";
 import { Editor, EditorState, RichUtils } from "draft-js";
 import "draft-js/dist/Draft.css";
-import axios from 'axios'
+import { connect } from "react-redux";
+import getUserNotes from "../ducks/reducer";
+import axios from "axios";
 
 class MyEditor extends Component {
   constructor(props) {
@@ -21,7 +23,10 @@ class MyEditor extends Component {
   }
 
   componentDidMount() {
-    axios.get('/api/user-data').then(res => console.log(res.data))
+    axios.get("/api/user-data").then(res => {
+      console.log(res.data);
+      this.props.getUserNotes(res.data);
+    });
     this.focusEditor();
   }
 
@@ -39,7 +44,7 @@ class MyEditor extends Component {
   }
 
   render() {
-      console.log(this.state)
+    console.log(this.state);
     return (
       <div style={styles.editor} onClick={this.focusEditor}>
         <button onClick={this._onBoldClick.bind(this)}>Bold</button>
@@ -61,5 +66,11 @@ const styles = {
   }
 };
 
+function mapStateToProps(state) {
+  return {
+    notes: state.notes
+  };
+}
+
 // ReactDOM.render(<MyEditor />, document.getElementById("container"));
-export default MyEditor;
+export default connect(mapStateToProps)(MyEditor);
