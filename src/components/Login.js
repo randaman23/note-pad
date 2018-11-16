@@ -30,7 +30,7 @@ class Login extends Component {
       .post("/auth/login", { email, password })
       .then(res => {
         console.log(res.data);
-        this.props.history.push("/editor");
+        this.props.history.push("/notepad");
       })
       .catch(err => alert("Email or Password incorrect."));
   }
