@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./Login.css";
 
 class Login extends Component {
   constructor(props) {
@@ -37,22 +38,24 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="register_login">
-        <div className="login_box">
-          <h1>Login</h1>
-          <input
-            type="email"
-            placeholder="Email"
-            onChange={e => this.handleEmail(e)}
-          />
-          <br />
-          <input
-            type="password"
-            placeholder="Password"
-            onChange={e => this.handlePassword(e)}
-          />
-          <br />
-          <button onClick={e => this.login(e)}>Sign In</button>
+      <div className="login_register_main">
+        <div className="register_login">
+          <div className="login_box">
+            <h1>Login</h1>
+            <input
+              type="email"
+              placeholder="Email"
+              onChange={e => this.handleEmail(e)}
+            />
+            <br />
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={e => this.handlePassword(e)}
+            />
+            <br />
+            <button onClick={e => this.login(e)}>Sign In</button>
+          </div>
         </div>
       </div>
     );

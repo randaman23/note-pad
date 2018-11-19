@@ -2,6 +2,7 @@
   background: #edeaea;
   width: 100vw;
   height: 100vh;
+  /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
 }
 .app_main h1{
   font-family: 'Roboto Mono';

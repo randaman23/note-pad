@@ -49,7 +49,7 @@ class Notepad extends Component {
       );
     });
     return (
-      <div>
+      <div m>
         <div className="note_header">
           <h1>Notepad</h1>
           <button>Sign Out</button>
