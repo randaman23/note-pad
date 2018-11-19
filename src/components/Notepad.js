@@ -33,7 +33,9 @@ class Notepad extends Component {
 
   selectNote() {}
 
-  deleteNote() {}
+  deleteNote(note_id) {
+    axios.delete("/api/delete", { note_id }).then(res => console.log(res.data));
+  }
 
   render() {
     let userNotes = this.state.notes.map((val, i) => {
@@ -48,7 +50,10 @@ class Notepad extends Component {
           }
         >
           {val.note_content}
-          <button onClick={() => this.deleteNote()}>X</button>
+          <div>
+            <button onClick={e => this.deleteNote(e.note_id)}>X</button>
+          </div>
+
           <hr />
         </div>
       );

@@ -30,13 +30,20 @@ module.exports = {
   async userData(req, res) {
     const db = req.app.get("db");
     let userNotes = await db.get_user(req.session.user.user_id);
-    console.log(req.session.user.user_id)
+    console.log(req.session.user.user_id);
     res.status(200).send(userNotes);
   },
 
- async newNote(req, res) {
-  const db = req.app.get("db")
-  let newNote = await db.new_note(req.session.user.user_id)
-  res.status(200).send(newNote)
+  async newNote(req, res) {
+    const db = req.app.get("db");
+    let newNote = await db.new_note(req.session.user.user_id);
+    res.status(200).send(newNote);
+  },
+
+  async deleteNote(req, res) {
+    const db = req.app.get("db");
+    const { note_id } = req.body;
+    let deleted = await db.delete_note([req.session.user.user_id, note_id]);
+    res.status(200).send(deleted)
   }
 };
