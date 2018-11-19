@@ -7,7 +7,8 @@ class Notepad extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      notes: []
+      notes: [],
+      text: ""
     };
   }
 
@@ -22,14 +23,27 @@ class Notepad extends Component {
   addNewNote() {
     axios.post("/api/addnote").then(res => {
       console.log(res.data);
-      this.setState({notes: res.data})
+      this.setState({ notes: res.data });
     });
   }
+
+  handleText(e) {
+    this.setState({ text: e.target.value });
+  }
+
+  selectNote() {}
 
   render() {
     let userNotes = this.state.notes.map((val, i) => {
       return (
-        <div key={i}>
+        <div
+          key={i}
+          onClick={() =>
+            this.selectNote(
+              this.setState({ text: this.state.notes[i].note_content })
+            )
+          }
+        >
           {val.note_content} <hr />
         </div>
       );
@@ -48,7 +62,15 @@ class Notepad extends Component {
             {userNotes}
           </div>
           <div className="text_area">
-            <textarea name="" id="" cols="90" rows="10" />
+            <textarea
+              onChange={e => this.handleText(e)}
+              value={this.state.text}
+              placeholder="Add Your Notes"
+              name=""
+              id=""
+              cols="90"
+              rows="10"
+            />
           </div>
         </div>
       </div>
