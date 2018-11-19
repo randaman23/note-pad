@@ -33,10 +33,13 @@ class Notepad extends Component {
 
   selectNote() {}
 
+  deleteNote() {}
+
   render() {
     let userNotes = this.state.notes.map((val, i) => {
       return (
         <div
+          className="the_notes"
           key={i}
           onClick={() =>
             this.selectNote(
@@ -44,12 +47,14 @@ class Notepad extends Component {
             )
           }
         >
-          {val.note_content} <hr />
+          {val.note_content}
+          <button onClick={() => this.deleteNote()}>X</button>
+          <hr />
         </div>
       );
     });
     return (
-      <div m>
+      <div>
         <div className="note_header">
           <h1>Notepad</h1>
           <button>Sign Out</button>

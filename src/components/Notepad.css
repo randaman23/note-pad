@@ -18,7 +18,13 @@
     background: #859CE6;
 }
 .user_notes{
+    /* display: flex;
+    flex-direction: column; */
     background: #9B969C;
     width: 30vw;
 }
+/* .the_notes{
+    display: flex;;
+
+} */
 

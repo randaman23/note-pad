@@ -10,6 +10,7 @@
     background: #859CE6;
     position: fixed;
     border-radius: 2px;
+    z-index: 5;
 }
 .home_header h1{
     margin-left: 20px;
@@ -24,6 +25,8 @@
     background-image: url('https://cdn-images-1.medium.com/max/1600/1*I-p02fB1tRkSwME11T95vg.jpeg');
     background-size: cover;
     background-position: center;
+    /* clip-path: polygon(7% 0, 100% 0%, 90% 100%, 0% 100%); */
+
 }
 .register{
     display: flex;
