@@ -42,8 +42,8 @@ module.exports = {
 
   async deleteNote(req, res) {
     const db = req.app.get("db");
-    const { note_id } = req.body;
-    let deleted = await db.delete_note([req.session.user.user_id, note_id]);
+    const { id } = req.params;
+    let deleted = await db.delete_note([req.session.user.user_id, id]);
     res.status(200).send(deleted)
   }
 };

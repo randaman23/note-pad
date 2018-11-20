@@ -27,7 +27,7 @@ app.post(`/api/createuser`, controller.createUser);
 app.post(`/auth/login`, controller.login)
 app.get('/api/user-data', controller.userData)
 app.post('/api/addnote', controller.newNote)
-app.delete('/api/delete', controller.deleteNote)
+app.delete('/api/delete/:id', controller.deleteNote)
 
 
 app.listen(SERVER_PORT, () => {

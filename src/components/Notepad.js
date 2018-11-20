@@ -33,8 +33,11 @@ class Notepad extends Component {
 
   selectNote() {}
 
-  deleteNote(note_id) {
-    axios.delete("/api/delete", { note_id }).then(res => console.log(res.data));
+  deleteNote(id) {
+    axios.delete(`/api/delete/${id}`).then(res => {
+      console.log(res.data);
+      this.setState({ notes: res.data });
+    });
   }
 
   render() {
@@ -50,10 +53,7 @@ class Notepad extends Component {
           }
         >
           {val.note_content}
-          <div>
-            <button onClick={e => this.deleteNote(e.note_id)}>X</button>
-          </div>
-
+          <button onClick={e => this.deleteNote(val.note_id)}>X</button>
           <hr />
         </div>
       );
@@ -67,6 +67,7 @@ class Notepad extends Component {
         <div className="main_notepad">
           <div className="user_notes">
             <button onClick={e => this.addNewNote(e)}>Add New Note</button>
+
             <br />
             <hr />
             {userNotes}
