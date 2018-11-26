@@ -1,23 +1,24 @@
-.register_login{
-display: flex;
-justify-content: center;
+.register_login {
+  display: flex;
+  justify-content: center;
 }
-.login_box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 70vw;
-/* height: 200px;
-width: 500px; */
-background: #edeaea;
-padding: 20px;
-margin-top: 240px;
-border-radius: 5px;
+.login_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40vw;
+  height: 50vh;
+  background: #edeaea;
+  padding: 20px;
+  /* margin-top: 240px; */
+  border-radius: 5px;
 }
-.login_register_main{
-    height: 100vh;
-    width: 100vw;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    background: #859CE6;
-    
+.login_register_main {
+  height: 100vh;
+  width: 100vw;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background: #859ce6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
