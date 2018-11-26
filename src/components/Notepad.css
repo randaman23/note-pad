@@ -11,20 +11,45 @@
 }
 
 .main_notepad{
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: 
 }
 
 .note_header{
     background: #859CE6;
 }
 .user_notes{
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
     background: #9B969C;
     width: 30vw;
+    height: 80vh;
 }
-/* .the_notes{
-    display: flex;;
-
-} */
+.user_notes button{
+    width: 100px;
+    margin: 5px;
+}
+.the_notes{
+    display: flex;
+    height: 5vh;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #859CE6;
+    margin: 0 0 5px 0;
+    border-radius: 5px;
+}
+.the_notes button{
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+}
+textarea{
+    width: 65vw;
+    height: 80vh;
+}
 

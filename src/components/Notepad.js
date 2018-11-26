@@ -58,7 +58,7 @@ class Notepad extends Component {
         >
           {val.note_content}
           <button onClick={e => this.deleteNote(val.note_id)}>X</button>
-          <hr />
+          
         </div>
       );
     });
@@ -73,22 +73,20 @@ class Notepad extends Component {
             <button onClick={e => this.addNewNote(e)}>Add New Note</button>
 
             <br />
-            <hr />
+            {/* <hr /> */}
             {userNotes}
           </div>
-          <div className="text_area">
-            <textarea
-              onChange={e => this.handleText(e)}
-              value={this.state.text}
-              placeholder="Add Your Notes"
-              name=""
-              id=""
-              cols="90"
-              rows="10"
-            />
-          </div>
+          {/* <div className="text_area"> */}
+          <textarea
+            onChange={e => this.handleText(e)}
+            value={this.state.text}
+            placeholder="Add Your Notes"
+            name=""
+            id=""
+          />
         </div>
       </div>
+      // </div>
     );
   }
 }
