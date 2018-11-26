@@ -65,7 +65,7 @@ class Notepad extends Component {
     return (
       <div>
         <div className="note_header">
-          <h1>Notepad</h1>
+          <h1>Jot Down Some Thoughts Mate</h1>
           <button onClick={() => this.logout()}>Sign Out</button>
         </div>
         <div className="main_notepad">

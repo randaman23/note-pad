@@ -24,6 +24,12 @@ class Home extends Component {
           </div>
         </div>
         <img src={pen} alt="" width="70%" />
+        <div className="signin" />
+        <img src={pen} alt="" width="70%" />
+        <div className="signin" />
+        <img src={pen} alt="" width="70%" />
+        <div className="signin" />
+        <img src={pen} alt="" width="70%" />
       </div>
     );
   }

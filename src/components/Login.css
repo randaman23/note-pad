@@ -7,25 +7,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 45vw;
+  width: 40vw;
   height: 20vh;
   background: #edeaea;
   padding: 20px;
   border-radius: 5px;
-  /* clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%); */
-  /* background: #3d3547; */
+  box-shadow: 1px 1px 1px;
 }
-.login_box button{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* width: 100px; */
-    padding: 10px;
-    font-family: 'Roboto Mono';
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 3px;
+.login_box button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-family: "Roboto Mono";
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
+  clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%);
+  background: #859ce6;
 }
 .login_register_main {
   height: 100vh;
@@ -36,11 +36,10 @@
   flex-direction: column;
   justify-content: center;
 }
-.login_register_main h1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    /* margin-left: -70px; */
+.login_register_main h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #edeaea;
 }
