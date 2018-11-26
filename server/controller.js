@@ -45,5 +45,10 @@ module.exports = {
     const { id } = req.params;
     let deleted = await db.delete_note([req.session.user.user_id, id]);
     res.status(200).send(deleted)
+  },
+
+  async logout(req, res) {
+    req.session.destroy()
+    res.status(200).send('User Logged Out')
   }
 };

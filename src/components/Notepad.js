@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./Notepad.css";
 
-
 class Notepad extends Component {
   constructor(props) {
     super(props);
@@ -39,6 +38,12 @@ class Notepad extends Component {
     });
   }
 
+  async logout() {
+    let res = await axios.get(`auth/logout`);
+    console.log(res);
+    this.props.history.push("/");
+  }
+
   render() {
     let userNotes = this.state.notes.map((val, i) => {
       return (
@@ -61,7 +66,7 @@ class Notepad extends Component {
       <div>
         <div className="note_header">
           <h1>Notepad</h1>
-          <button>Sign Out</button>
+          <button onClick={() => this.logout()}>Sign Out</button>
         </div>
         <div className="main_notepad">
           <div className="user_notes">
@@ -87,7 +92,5 @@ class Notepad extends Component {
     );
   }
 }
-
-
 
 export default Notepad;
