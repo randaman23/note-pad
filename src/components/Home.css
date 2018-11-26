@@ -34,6 +34,7 @@
   flex-direction: column;
   align-items: center;
   width: 70vw;
+  height: 25vh;
   background-image: url("https://images.unsplash.com/photo-1536704231234-beca9772ca68?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=82c2d17822215dc74cdb7ff5a7a16aad&w=1000&q=80");
   background-size: cover;
   background-position-y: -210px;
@@ -49,6 +50,7 @@
   background: #859ce6;
   border-radius: 10px;
   padding: 10px;
+  height: 25vh;
 }
 .in_register button{
   width: 100px;

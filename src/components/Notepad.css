@@ -51,7 +51,7 @@
   border-radius: 4px;
 }
 .user_notes button {
-  width: 100px;
+  width: 24vw;
   margin: 5px;
   border-radius: 3px;
   display: flex;
@@ -60,7 +60,7 @@
   justify-content: center;
   padding: 10px;
   font-family: "Roboto Mono";
-  font-size: 12px;
+  font-size: 20px;
   font-weight: bold;
   border-radius: 3px;
   clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%);
@@ -75,6 +75,7 @@
   background: #859ce6;
   margin: 0 0 5px 0;
   border-radius: 10px;
+  /* font-family: 'Roboto Mono'; */
 }
 .the_notes button {
   width: 10px;
@@ -86,6 +87,7 @@
   padding: 10px;
   border-radius: 3px;
   background: #ff334a;
+  border: 1px solid black;
 }
 textarea {
   width: 65vw;

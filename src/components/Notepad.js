@@ -70,7 +70,7 @@ class Notepad extends Component {
         </div>
         <div className="main_notepad">
           <div className="user_notes">
-            <button onClick={e => this.addNewNote(e)}>Add New Note</button>
+            <button onClick={e => this.addNewNote(e)}>New Note</button>
 
             <br />
             {/* <hr /> */}
