@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./Notepad.css";
-// import { connect } from "react-redux";
+
 
 class Notepad extends Component {
   constructor(props) {
@@ -16,7 +16,6 @@ class Notepad extends Component {
     axios.get("/api/user-data").then(res => {
       console.log(res.data);
       this.setState({ notes: res.data });
-      // this.props.getUserNotes(res.data);
     });
   }
 
@@ -89,12 +88,6 @@ class Notepad extends Component {
   }
 }
 
-// function mapStateToProps(state) {
-//   return {
-//     notes: state.notes
-//   };
-// }
 
-// export default connect(mapStateToProps)(Notepad)
 
 export default Notepad;
