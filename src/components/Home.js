@@ -23,7 +23,7 @@ class Home extends Component {
             </Link>
           </div>
         </div>
-        <img src={pen} alt="" width="100%" />
+        <img src={pen} alt="" width="70%" />
       </div>
     );
   }

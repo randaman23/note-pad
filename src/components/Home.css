@@ -1,51 +1,52 @@
-.home_main{
-    display: flex;
-    flex-direction: column;
+.home_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #edeaea;
 }
 
-
-.home_header{
-    height: 12vh;
-    width: 100vw;
-    background: #859CE6;
-    position: fixed;
-    border-radius: 2px;
-    z-index: 5;
+.home_header {
+  height: 12vh;
+  width: 100vw;
+  background: #859ce6;
+  position: fixed;
+  border-radius: 2px;
+  z-index: 5;
 }
-.home_header h1{
-    margin-left: 20px;
+.home_header h1 {
+  margin-left: 20px;
 }
-.pushdown{
-    height: 15vh;
-}
-
-.signin{
-    height: 40vh;
-    width: 100vw;
-    background-image: url('https://cdn-images-1.medium.com/max/1600/1*I-p02fB1tRkSwME11T95vg.jpeg');
-    background-size: cover;
-    background-position: center;
-    /* clip-path: polygon(100% 86%, 15% 100%, 0 0, 100% 0); */
-}
-.register{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    background-image: url('https://images.unsplash.com/photo-1536704231234-beca9772ca68?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=82c2d17822215dc74cdb7ff5a7a16aad&w=1000&q=80');
-    background-size: cover;
-    background-position: center;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-
-    /* position: fixed; */
+.pushdown {
+  height: 15vh;
 }
 
-.in_register{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #859CE6;
-    border-radius: 10px;
-    padding: 10px;
+.signin {
+  height: 40vh;
+  width: 70vw;
+  background-image: url("https://cdn-images-1.medium.com/max/1600/1*I-p02fB1tRkSwME11T95vg.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+  /* clip-path: polygon(100% 86%, 15% 100%, 0 0, 100% 0); */
+}
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70vw;
+  background-image: url("https://images.unsplash.com/photo-1536704231234-beca9772ca68?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=82c2d17822215dc74cdb7ff5a7a16aad&w=1000&q=80");
+  background-size: cover;
+  background-position-y: -210px;
+  position: fixed;
+  margin-top: 350px;
+  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
 }
 
+.in_register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #859ce6;
+  border-radius: 10px;
+  padding: 10px;
+}

@@ -36,9 +36,10 @@ class Register extends Component {
   render() {
     return (
       <div className="login_register_main">
+        <h1>Thought Jotter</h1>
         <div className="register_login">
           <div className="login_box">
-            <h1>Register</h1>
+            <h2>Register</h2>
             <input
               type="email"
               placeholder="Email"

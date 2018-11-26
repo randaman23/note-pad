@@ -10,6 +10,8 @@
 .app_main h1{
   font-family: 'Roboto Mono';
   color: #3d3547;
-  /* display: flex;
-  flex-direction: row; */
+}
+.app_main h2{
+  font-family: 'Roboto Mono';
+  color: #3d3547;
 }
