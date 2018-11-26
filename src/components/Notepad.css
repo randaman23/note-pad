@@ -55,15 +55,15 @@
   margin: 5px;
   border-radius: 3px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: 10px;
   font-family: "Roboto Mono";
   font-size: 20px;
   font-weight: bold;
   border-radius: 3px;
-  clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%);
+  /* clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%); */
   background: #859ce6;
 }
 .the_notes {
@@ -78,8 +78,8 @@
   /* font-family: 'Roboto Mono'; */
 }
 .the_notes button {
-  width: 10px;
-  height: 10px;
+  width: 35px;
+  height: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,7 +87,7 @@
   padding: 10px;
   border-radius: 3px;
   background: #ff334a;
-  border: 1px solid black;
+  font-size: 20px;
 }
 textarea {
   width: 65vw;
