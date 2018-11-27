@@ -9,9 +9,14 @@
 }
 .app_main h1{
   font-family: 'Roboto Mono';
-  color: #3d3547;
+  /* color: #3d3547; */
+  color: #edeaea;
 }
 .app_main h2{
+  font-family: 'Roboto Mono';
+  color: #3d3547;
+}
+.app_main h3{
   font-family: 'Roboto Mono';
   color: #3d3547;
 }

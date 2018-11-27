@@ -8,7 +8,7 @@
 .home_header {
   height: 12vh;
   width: 100vw;
-  background: #859ce6;
+  background: linear-gradient(97deg, #859ce6,#7386c5,#8594c5,#94a1c9); 
   position: fixed;
   border-radius: 2px;
   z-index: 5;
@@ -21,7 +21,7 @@
 .home_header i{
   font-size: 50px;
   margin-left: 12px;
-  color: #3d3547;
+  color: #edeaea;
 }
 .home_header h1 {
   margin-left: 20px;
@@ -58,7 +58,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #859ce6;
+  background: linear-gradient(0deg, #859ce6,#7386c5,#8594c5,#94a1c9,#859ce6,#7386c5,#8594c5,#94a1c9); 
   border-radius: 10px;
   padding: 10px;
   height: 25vh;

@@ -24,7 +24,7 @@ class Notepad extends Component {
   addNewNote() {
     axios.post("/api/addnote").then(res => {
       console.log(res.data);
-      this.setState({ notes: res.data });
+      this.setState({ notes: res.data, text: res.data[0].note_content });
     });
   }
 

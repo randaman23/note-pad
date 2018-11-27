@@ -21,11 +21,12 @@
   justify-content: center;
   padding: 10px;
   font-family: "Roboto Mono";
-  font-size: 12px;
+  font-size: 16px;
   font-weight: bold;
   border-radius: 3px;
   clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%);
   background: #859ce6;
+  color: #edeaea;
 }
 .login_register_main {
   height: 100vh;
@@ -36,10 +37,12 @@
   flex-direction: column;
   justify-content: center;
 }
-.login_register_main h1 {
+.login_register_main h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
   background: #edeaea;
+  color: #3d3547;
 }
