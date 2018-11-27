@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./Notepad.css";
-import {Icon} from 'antd'
+import { Icon } from "antd";
 
 class Notepad extends Component {
   constructor(props) {
@@ -26,8 +26,12 @@ class Notepad extends Component {
     });
   }
 
-  handleText(e) {
-    this.setState({ text: e.target.value });
+  handleText(id) {
+    const { text } = this.state.text;
+    this.setState({ text });
+    axios.put(`/api/edit/${id}`, { text }).then(res => {
+      console.log(res.data);
+    });
   }
 
   selectNote() {}
@@ -58,8 +62,9 @@ class Notepad extends Component {
           }
         >
           {val.note_content}
-          <button onClick={e => this.deleteNote(val.note_id)}><Icon type="delete" /></button>
-          
+          <button onClick={e => this.deleteNote(val.note_id)}>
+            <Icon type="delete" />
+          </button>
         </div>
       );
     });
@@ -72,7 +77,9 @@ class Notepad extends Component {
         </div>
         <div className="main_notepad">
           <div className="user_notes">
-            <button onClick={e => this.addNewNote(e)}>New Note <Icon type="smile" /></button>
+            <button onClick={e => this.addNewNote(e)}>
+              New Note <Icon type="smile" />
+            </button>
 
             <br />
             {/* <hr /> */}
@@ -82,7 +89,7 @@ class Notepad extends Component {
           <textarea
             onChange={e => this.handleText(e)}
             value={this.state.text}
-            placeholder="Add Your Notes" 
+            placeholder="Add Your Notes"
             name=""
             id=""
           />

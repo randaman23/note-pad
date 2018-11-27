@@ -44,11 +44,19 @@ module.exports = {
     const db = req.app.get("db");
     const { id } = req.params;
     let deleted = await db.delete_note([req.session.user.user_id, id]);
-    res.status(200).send(deleted)
+    res.status(200).send(deleted);
   },
 
   async logout(req, res) {
-    req.session.destroy()
-    res.status(200).send('User Logged Out')
+    req.session.destroy();
+    res.status(200).send("User Logged Out");
+  },
+
+  async editPost(req, res) {
+    const db = req.app.get("db");
+    const { id } = req.params;
+    const {note_content} = req.body
+    let edit = await db.edit_post([req.session.user.user_id, id, note_content]);
+    res.status(200).send(edit)
   }
 };
