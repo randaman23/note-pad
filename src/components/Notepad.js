@@ -34,10 +34,10 @@ class Notepad extends Component {
       console.log(res.data);
     });
   }
-  handleText(e) {
-    this.setState({ text: e.target.value });
-    e.persist();
-    this.delayedCallback(e);
+  handleText(event) {
+    this.setState({ text: event.target.value });
+    event.persist();
+    this.delayedCallback(event);
   }
 
   selectNote() {}
@@ -45,7 +45,7 @@ class Notepad extends Component {
   deleteNote(id) {
     axios.delete(`/api/delete/${id}`).then(res => {
       console.log(res.data);
-      this.setState({ notes: res.data });
+      this.setState({ notes: res.data, text: "" });
     });
   }
 
@@ -68,6 +68,7 @@ class Notepad extends Component {
           }
         >
           {val.note_content}
+          <div />
           <button onClick={e => this.deleteNote(val.note_id)}>
             <Icon type="delete" />
           </button>
