@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import pen from "../images/notebook_write_watch_pen_67636_1920x1080.jpg";
 import "./Home.css";
-// import { Icon } from "antd";
+import { Icon } from "antd";
 
 class Home extends Component {
   render() {
@@ -10,6 +10,7 @@ class Home extends Component {
       <div className="home_main">
         <div className="home_header">
           <h1>Thought Jotter</h1>
+          <Icon type="edit" />
           {/* <Icon type="home" />
           <Icon type="edit" /> */}
         </div>
