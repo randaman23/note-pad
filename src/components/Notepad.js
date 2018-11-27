@@ -10,8 +10,10 @@ class Notepad extends Component {
     this.state = {
       notes: [],
       text: ""
+      // id: 0
     };
-    this.delayedCallback = _.debounce(this.handleEditReq, 1000);
+    this.onChange = this.onChange.bind(this);
+    this.delayedCallback = _.debounce(this.handleEditReq, 5000);
   }
 
   componentDidMount() {
@@ -30,12 +32,23 @@ class Notepad extends Component {
 
   handleEditReq(id) {
     const { text } = this.state;
-    axios.put(`/api/edit/${id}`, { text }).then(res => {
-      console.log(res.data);
-    });
+    console.log(id, text);
+    for (let i = 0; i <= this.state.notes; i++) {
+      return this.state.notes[i].note_id
+    }
+    axios
+      .put(`/api/edit/${this.state.notes[0].note_id}`, { text })
+      .then(res => {
+        console.log(res.data);
+      });
   }
+
   handleText(event) {
     this.setState({ text: event.target.value });
+    this.onChange(event);
+  }
+
+  onChange(event) {
     event.persist();
     this.delayedCallback(event);
   }
@@ -56,6 +69,7 @@ class Notepad extends Component {
   }
 
   render() {
+    console.log(this.state.text);
     let userNotes = this.state.notes.map((val, i) => {
       return (
         <div
@@ -63,7 +77,10 @@ class Notepad extends Component {
           key={i}
           onClick={() =>
             this.selectNote(
-              this.setState({ text: this.state.notes[i].note_content })
+              this.setState({
+                text: this.state.notes[i].note_content
+                // id: this.state.notes[i].note_id
+              })
             )
           }
         >
