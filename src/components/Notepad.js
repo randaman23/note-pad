@@ -80,9 +80,7 @@ class Notepad extends Component {
             <button onClick={e => this.addNewNote(e)}>
               New Note <Icon type="smile" />
             </button>
-
             <br />
-            {/* <hr /> */}
             {userNotes}
           </div>
           {/* <div className="text_area"> */}

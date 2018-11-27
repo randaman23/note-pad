@@ -40,6 +40,7 @@
   border-radius: 3px;
   clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%);
   background: #edeaea;
+  box-shadow: 2px 2px 2px grey;
 }
 .user_notes {
   display: flex;
@@ -64,6 +65,7 @@
   font-size: 20px;
   font-weight: bold;
   border-radius: 3px;
+  box-shadow: 2px 2px 2px grey;
   /* clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%); */
   background: #859ce6;
 }
@@ -77,6 +79,7 @@
   background: #859ce6;
   margin: 0 0 5px 0;
   border-radius: 10px;
+  box-shadow: 2px 2px 2px grey;
   /* font-family: 'Roboto Mono'; */
 }
 .the_notes button {
