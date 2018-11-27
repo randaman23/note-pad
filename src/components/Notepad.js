@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./Notepad.css";
 import { Icon } from "antd";
+import _ from "lodash";
 
 class Notepad extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class Notepad extends Component {
       notes: [],
       text: ""
     };
+    this.delayedCallback = _.debounce(this.handleEditReq, 1000);
   }
 
   componentDidMount() {
@@ -26,12 +28,16 @@ class Notepad extends Component {
     });
   }
 
-  handleText(id) {
-    const { text } = this.state.text;
-    this.setState({ text });
+  handleEditReq(id) {
+    const { text } = this.state;
     axios.put(`/api/edit/${id}`, { text }).then(res => {
       console.log(res.data);
     });
+  }
+  handleText(e) {
+    this.setState({ text: e.target.value });
+    e.persist();
+    this.delayedCallback(e);
   }
 
   selectNote() {}
