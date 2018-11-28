@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import pen from "../images/notebook_write_watch_pen_67636_1920x1080.jpg";
+// import pen from "../images/notebook_write_watch_pen_67636_1920x1080.jpg";
 import "./Home.css";
 import { Icon } from "antd";
 
@@ -15,8 +15,8 @@ class Home extends Component {
           <Icon type="edit" /> */}
         </div>
         <div className="pushdown" />
-        <div className="signin" />
-        <div className="register">
+        {/* <div className="signin" /> */}
+        {/* <div className="register"> */}
           <div className="in_register">
             <h1>Login or Register</h1>
             <Link to="/login">
@@ -26,14 +26,14 @@ class Home extends Component {
               <button>Register</button>
             </Link>
           </div>
-        </div>
-        <img src={pen} alt="" width="70%" />
+        {/* </div> */}
+        {/* <img src={pen} alt="" width="70%" />
         <div className="signin" />
         <img src={pen} alt="" width="70%" />
         <div className="signin" />
         <img src={pen} alt="" width="70%" />
         <div className="signin" />
-        <img src={pen} alt="" width="70%" />
+        <img src={pen} alt="" width="70%" /> */}
       </div>
     );
   }

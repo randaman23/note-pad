@@ -9,10 +9,10 @@
   align-items: center;
   width: 40vw;
   height: 20vh;
-  background: #edeaea;
+  /* background: #edeaea; */
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px;
+  /* border-radius: 5px; */
+  /* box-shadow: 1px 1px 1px; */
 }
 .login_box button {
   display: flex;
@@ -24,7 +24,7 @@
   font-size: 16px;
   font-weight: bold;
   border-radius: 3px;
-  clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%);
+  /* clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%); */
   background: #859ce6;
   color: #edeaea;
 }
@@ -33,7 +33,8 @@
   width: 100vw;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   /* background: #859ce6; */
-  background: linear-gradient(97deg, #859ce6,#7386c5,#8594c5,#94a1c9);
+  /* background: linear-gradient(97deg, #859ce6,#7386c5,#8594c5,#94a1c9); */
+  opacity: .6;
   display: flex;
   flex-direction: column;
   justify-content: center;

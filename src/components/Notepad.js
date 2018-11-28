@@ -70,7 +70,7 @@ class Notepad extends Component {
   }
 
   render() {
-    console.log(this.state.text);
+    console.log(this.state);
     let userNotes = this.state.notes.map((val, i) => {
       return (
         <div
@@ -86,6 +86,7 @@ class Notepad extends Component {
             )
           }
         >
+          {/* <div>{val.note_content.length <= 15 ? val.note_content : val.note_content  + '...'}</div> */}
           <div>{val.note_content}</div>
           <div />
           <button onClick={e => this.deleteNote(val.note_id)}>

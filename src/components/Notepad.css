@@ -3,7 +3,6 @@
   width: 100vw;
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
   margin-top: 20px;
 }
 .text_area {
@@ -15,13 +14,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background: #edeaea;
+  background-image: url("https://picjumbo.com/wp-content/uploads/black-and-white-morning-foggy-forest_free_stock_photos_picjumbo_HNCK0599-2210x1474.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .note_header {
-  /* background: #859ce6; */
-  background: linear-gradient(97deg, #859ce6,#7386c5,#8594c5,#94a1c9);
-  /* clip-path: polygon(85% 0, 100% 51%, 86% 100%, 0 100%, 0 0); */
+  background: linear-gradient(3deg, #4b4b4b, #5d5d5d, #969696, #dedede);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -48,8 +47,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
-  /* background: #9B969C; */
   width: 30vw;
   height: 80vh;
   border-radius: 4px;
@@ -69,9 +66,8 @@
   font-weight: bold;
   border-radius: 3px;
   box-shadow: 2px 2px 2px grey;
-  /* clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%); */
-  /* background: #859ce6; */
-  background: linear-gradient(97deg, #859ce6,#7386c5,#8594c5,#94a1c9);
+  opacity: 0.8;
+  background: linear-gradient(169deg, #4b4b4b, #5d5d5d, #969696, #dedede);
   color: #edeaea;
 }
 .the_notes {
@@ -81,13 +77,12 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  /* background: #859ce6; */
-  background: linear-gradient(97deg, #859ce6,#7386c5,#8594c5,#94a1c9);
+  background: linear-gradient(25deg, #4b4b4b, #5d5d5d, #969696, #dedede);
   margin: 0 0 5px 0;
   border-radius: 10px;
   box-shadow: 2px 2px 2px grey;
   color: #edeaea;
-  /* font-family: 'Roboto Mono'; */
+  opacity: 0.7;
 }
 .the_notes button {
   width: 35px;
@@ -98,8 +93,6 @@
   align-items: center;
   padding: 16px;
   border-radius: 3px;
-  /* background: #ff334a; */
-  /* background: linear-gradient(97deg, #859ce6,#7386c5,#8594c5,#94a1c9); */
   font-size: 20px;
 }
 textarea {
@@ -107,4 +100,7 @@ textarea {
   height: 80vh;
   border-radius: 4px;
   border: none;
+  opacity: 0.5;
+  font-size: 14px;
+  font-family: "Merriweather";
 }
