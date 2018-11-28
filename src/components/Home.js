@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-// import { Icon } from "antd";
 
 class Home extends Component {
   render() {
@@ -9,8 +8,6 @@ class Home extends Component {
       <div className="home_main">
         <div className="home_header">
           <span>Thought Jotter</span>
-          {/* <Icon type="home" />
-          <Icon type="edit" /> */}
         </div>
         <div className="pushdown" />
         <div className="in_register">

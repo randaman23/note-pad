@@ -91,6 +91,12 @@
   opacity: 0.7;
   font-family: 'Merriweather'
 }
+.the_notes div{
+ max-width: 200px;
+ height: 20px;
+  overflow: hidden;
+}
+
 .user_notes div:hover{
   background: #3B7DD8;
   color: #EDEDED;

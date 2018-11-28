@@ -10,10 +10,9 @@ class Notepad extends Component {
     this.state = {
       notes: [],
       text: ""
-      // id: 0
     };
     this.onChange = this.onChange.bind(this);
-    this.delayedCallback = _.debounce(this.handleEditReq, 2000);
+    this.delayedCallback = _.debounce(this.handleEditReq, 4000);
   }
 
   componentDidMount() {
@@ -40,7 +39,7 @@ class Notepad extends Component {
       .put(`/api/edit/${this.state.notes[0].note_id}`, { text })
       .then(res => {
         console.log(res.data);
-        this.setState({ text: res.data[0].note_content, notes: res.data});
+        this.setState({ text: res.data[0].note_content, notes: res.data });
       });
   }
 
@@ -76,7 +75,6 @@ class Notepad extends Component {
   }
 
   render() {
-    console.log(this.state);
     let userNotes = this.state.notes.map((val, i) => {
       return (
         <div
@@ -87,12 +85,10 @@ class Notepad extends Component {
               val.note_id,
               this.setState({
                 text: this.state.notes[i].note_content
-                // id: this.state.notes[i].note_id
               })
             )
           }
         >
-          {/* <div>{val.note_content.length <= 15 ? val.note_content : val.note_content  + '...'}</div> */}
           <div>{val.note_content}</div>
           <div />
           <button onClick={e => this.deleteNote(val.note_id)}>
@@ -105,7 +101,7 @@ class Notepad extends Component {
       <div>
         <div className="note_header">
           <h1>Jot Down Some Thoughts Mate</h1>
-          {/* <div className="pushdown_2" /> */}
+          {/* <button>Note Graveyard</button> */}
           <button onClick={() => this.logout()}>Sign Out</button>
         </div>
         <div className="main_notepad">
@@ -116,7 +112,6 @@ class Notepad extends Component {
             <br />
             {userNotes}
           </div>
-          {/* <div className="text_area"> */}
           <textarea
             onClick={e => this.handleNewNote(e)}
             onChange={e => this.handleText(e)}
@@ -127,7 +122,6 @@ class Notepad extends Component {
           />
         </div>
       </div>
-      // </div>
     );
   }
 }

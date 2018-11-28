@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./Login.css";
-// import { connect } from "react-redux";
-// import getUserNotes from "../ducks/reducer";
 
 class Login extends Component {
   constructor(props) {
@@ -34,7 +32,6 @@ class Login extends Component {
       .then(res => {
         console.log(res.data);
         this.props.history.push("/notepad");
-        // this.props.getUserNotes(res.data);
       })
       .catch(err => alert("Email or Password incorrect."));
   }
@@ -65,13 +62,5 @@ class Login extends Component {
     );
   }
 }
-
-// function mapStateToProps(state) {
-//   return {
-//     notes: state.notes
-//   };
-// }
-
-// export default connect(mapStateToProps, {getUserNotes})(Login)
 
 export default Login;
