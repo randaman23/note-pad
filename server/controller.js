@@ -57,7 +57,7 @@ module.exports = {
     const { id } = req.params;
     const { text } = req.body;
     console.log(text, id)
-    let edit = await db.edit_post([text, id]);
+    let edit = await db.edit_post([text, id, req.session.user.user_id]);
     res.status(200).send(edit);
   }
 };

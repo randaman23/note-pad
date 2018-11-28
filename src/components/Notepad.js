@@ -40,7 +40,7 @@ class Notepad extends Component {
       .put(`/api/edit/${this.state.notes[0].note_id}`, { text })
       .then(res => {
         console.log(res.data);
-        this.setState({ text: res.data[0].note_content });
+        this.setState({ text: res.data[0].note_content, notes: res.data});
       });
   }
 
