@@ -9,7 +9,7 @@ class Home extends Component {
     return (
       <div className="home_main">
         <div className="home_header">
-          <span>Thought Jotter  </span>
+          <span>Thought Jotter</span>
           {/* <Icon type="home" />
           <Icon type="edit" /> */}
         </div>

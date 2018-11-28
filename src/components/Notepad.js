@@ -62,6 +62,12 @@ class Notepad extends Component {
       this.setState({ notes: res.data, text: "" });
     });
   }
+  handleNewNote() {
+    const { text } = this.state;
+    if (text === "New Note") {
+      this.setState({ text: "" });
+    }
+  }
 
   async logout() {
     let res = await axios.get(`auth/logout`);
@@ -112,6 +118,7 @@ class Notepad extends Component {
           </div>
           {/* <div className="text_area"> */}
           <textarea
+            onClick={e => this.handleNewNote(e)}
             onChange={e => this.handleText(e)}
             value={this.state.text}
             placeholder="Add Your Notes"
