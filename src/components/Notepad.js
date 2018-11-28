@@ -86,7 +86,7 @@ class Notepad extends Component {
             )
           }
         >
-          {val.note_content}
+          <div>{val.note_content}</div>
           <div />
           <button onClick={e => this.deleteNote(val.note_id)}>
             <Icon type="delete" />
