@@ -34,12 +34,13 @@ class Notepad extends Component {
     const { text } = this.state;
     console.log(id, text);
     for (let i = 0; i <= this.state.notes; i++) {
-      return this.state.notes[i].note_id
+      return this.state.notes[i].note_id;
     }
     axios
       .put(`/api/edit/${this.state.notes[0].note_id}`, { text })
       .then(res => {
         console.log(res.data);
+        this.setState({ text: res.data[0].note_content });
       });
   }
 
