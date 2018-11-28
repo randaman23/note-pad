@@ -15,26 +15,34 @@
   /* box-shadow: 1px 1px 1px; */
 }
 .login_box button {
+  width: 100px;
+  margin: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  font-family: "Roboto Mono";
-  font-size: 16px;
+  font-family: "Merriweather";
+  font-size: 14px;
   font-weight: bold;
+  text-decoration: none;
+  color: #393939;
+  opacity: 0.5;
+  border: 1px solid;
   border-radius: 3px;
-  /* clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%); */
-  background: #859ce6;
-  color: #edeaea;
+  padding: 15px;
 }
+.login_box button:hover {
+  background: #3b7dd8;
+  color: #ededed;
+}
+
 .login_register_main {
   height: 100vh;
   width: 100vw;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   /* background: #859ce6; */
   /* background: linear-gradient(97deg, #859ce6,#7386c5,#8594c5,#94a1c9); */
-  opacity: .6;
+  opacity: 0.6;
   display: flex;
   flex-direction: column;
   justify-content: center;
