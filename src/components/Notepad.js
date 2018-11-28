@@ -13,7 +13,7 @@ class Notepad extends Component {
       // id: 0
     };
     this.onChange = this.onChange.bind(this);
-    this.delayedCallback = _.debounce(this.handleEditReq, 5000);
+    this.delayedCallback = _.debounce(this.handleEditReq, 2000);
   }
 
   componentDidMount() {
@@ -77,6 +77,7 @@ class Notepad extends Component {
           key={i}
           onClick={() =>
             this.selectNote(
+              val.note_id,
               this.setState({
                 text: this.state.notes[i].note_content
                 // id: this.state.notes[i].note_id
