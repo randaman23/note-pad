@@ -100,7 +100,7 @@ class Notepad extends Component {
     return (
       <div>
         <div className="note_header">
-          <h1>Jot Down Some Thoughts Mate</h1>
+          <h1>Thought Jottr</h1>
           {/* <button>Note Graveyard</button> */}
           <button onClick={() => this.logout()}>Sign Out</button>
         </div>

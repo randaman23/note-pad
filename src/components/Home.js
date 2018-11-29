@@ -7,9 +7,10 @@ class Home extends Component {
     return (
       <div className="home_main">
         <div className="home_header">
-          <span>Thought Jotter</span>
+          <span>Thought Jottr</span>
         </div>
         <div className="pushdown" />
+        <div className="thoughts">The Place For All Your Thoughts</div>
         <div className="in_register">
           <Link to="/login">
             <p>Sign In</p>

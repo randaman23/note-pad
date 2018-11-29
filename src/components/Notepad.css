@@ -26,6 +26,7 @@
   justify-content: space-around;
   border-radius: 4px;
   opacity: .7;
+  height: 12vh;
 }
 .note_header button {
   width: 100px;
