@@ -12,6 +12,7 @@ massive(CONNECTION_STRING).then(db => {
   app.set("db", db);
   console.log("db is connected");
 });
+app.use( express.static( `${__dirname}/../build` ) );
 
 app.use(express.json());
 
