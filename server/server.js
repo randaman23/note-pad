@@ -30,7 +30,7 @@ app.get('/api/user-data', controller.userData)
 app.post('/api/addnote', controller.newNote)
 app.delete('/api/delete/:id', controller.deleteNote)
 app.get('/auth/logout', controller.logout)
-app.put(`/api/edit/:id`, controller.editPost)
+app.put(`/api/edit`, controller.editPost)
 
 
 app.listen(SERVER_PORT, () => {
