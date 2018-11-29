@@ -33,10 +33,9 @@ class Notepad extends Component {
   handleEditReq(e) {
     const { text, id } = this.state;
     console.log(e, text);
-
     axios.put(`/api/edit`, { text, id }).then(res => {
       console.log("i am the data", res.data);
-      // this.setState({ text: res.data[0].note_content, notes: res.data });
+      this.setState({ notes: res.data });
     });
   }
 
