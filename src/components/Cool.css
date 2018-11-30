@@ -1,0 +1,27 @@
+.cool_main img{
+    width: 36vw;
+    transition: transform .2s;
+    border-radius: 3px;
+}
+.cool_main img:hover{
+    transform: scale(1.5);
+    /* margin: -100px; */
+}
+.mars_pics{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.pushdown_mars{
+    height: 23vh;
+  }
+  .cool_main{
+      height: 100vh;
+      width: 100vw;
+      background:#FFFFFF;
+  }
+  .mars_pics p{
+      font-family: 'Merriweather'
+  }

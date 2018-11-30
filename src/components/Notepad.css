@@ -133,4 +133,23 @@ textarea {
   font-size: 14px;
   font-family: "Merriweather";
 }
-
+.quote_box{
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Cormorant Upright';
+  font-size: 24px;
+  font-weight: bold;
+  opacity: .5;
+}
+.quote_quote{
+  height: 10vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

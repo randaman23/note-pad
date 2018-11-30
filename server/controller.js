@@ -67,5 +67,9 @@ module.exports = {
       `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=${MARS}`
     );
     res.status(200).send(mars.data);
+  },
+  async getQuote(req, res) {
+    let quote = await axios.get('https://api.adviceslip.com/advice')
+    res.status(200).send(quote.data)
   }
 };

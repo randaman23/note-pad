@@ -10,16 +10,22 @@ class Notepad extends Component {
     this.state = {
       notes: [],
       text: "",
-      id: 0
+      id: 0,
+      advice: ""
     };
     this.onChange = this.onChange.bind(this);
     this.delayedCallback = _.debounce(this.handleEditReq, 4000);
+    this.getQuote = this.getQuote.bind(this);
   }
 
   componentDidMount() {
     axios.get("/api/user-data").then(res => {
       console.log(res.data);
-      this.setState({ notes: res.data });
+      this.setState({notes: res.data});
+    });
+    axios.get(`/api/get-quote`).then(res => {
+      console.log(res.data);
+      this.setState({ advice: res.data.slip.advice });
     });
   }
 
@@ -71,6 +77,13 @@ class Notepad extends Component {
     this.props.history.push("/");
   }
 
+  getQuote() {
+    axios.get(`/api/get-quote`).then(res => {
+      console.log(res.data);
+      this.setState({ advice: res.data.slip.advice });
+    });
+  }
+
   render() {
     console.log();
     let userNotes = this.state.notes.map((val, i) => {
@@ -102,6 +115,13 @@ class Notepad extends Component {
           {/* <button>Note Graveyard</button> */}
           <button onClick={() => this.logout()}>Sign Out</button>
         </div>
+        <div className="quote_box">
+          <button onClick={this.getQuote}>Quote</button>
+          <div className="quote_quote">
+            <p>{this.state.advice}</p>
+          </div>
+        </div>
+
         <div className="main_notepad">
           <div className="user_notes">
             <button onClick={e => this.addNewNote(e)}>
@@ -110,14 +130,16 @@ class Notepad extends Component {
             <br />
             {userNotes}
           </div>
-          <textarea
-            onClick={e => this.handleNewNote(e)}
-            onChange={e => this.handleText(e)}
-            value={this.state.text}
-            placeholder="Add Your Notes"
-            name=""
-            id=""
-          />
+          <div className="text_movement">
+            <textarea
+              onClick={e => this.handleNewNote(e)}
+              onChange={e => this.handleText(e)}
+              value={this.state.text}
+              placeholder="Add Your Notes"
+              name=""
+              id=""
+            />
+          </div>
         </div>
       </div>
     );

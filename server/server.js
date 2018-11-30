@@ -33,6 +33,7 @@ app.get("/auth/logout", controller.logout);
 app.put(`/api/edit`, controller.editPost);
 
 app.get(`/api/mars`, controller.mars);
+app.get(`/api/get-quote`, controller.getQuote)
 
 app.listen(SERVER_PORT, () => {
   console.log(`Hoi from port ${SERVER_PORT}`);
