@@ -99,3 +99,35 @@
   opacity: 0.2;
   text-align: center;
 }
+.below{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  height: 10vh;
+  width: 56vw;
+  margin-top: 30px;
+}
+.below a{
+  width: 100px;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Merriweather";
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #393939;
+  opacity: 0.5;
+  border: 1px solid;
+  border-radius: 3px;
+}
+.below a:hover {
+  background: #3b7dd8;
+  color: #ededed;
+}

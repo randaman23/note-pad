@@ -19,6 +19,11 @@ class Home extends Component {
             <p>Register</p>
           </Link>
         </div>
+        <div className="below">
+          <Link to="/cool">
+            <p>Mars</p>
+          </Link>
+        </div>
       </div>
     );
   }

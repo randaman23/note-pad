@@ -11,9 +11,11 @@
   height: 20vh;
   margin-top: 210px;
   padding: 20px;
-  /* background: #edeaea; */
-  /* border-radius: 5px; */
-  /* box-shadow: 1px 1px 1px; */
+  border-left: none;
+    /* padding: 40px;
+    /* border: 1px solid #B3B3B3; */
+    /* border-radius: 3px;
+    box-shadow: 0px 1px 1px #505050; */ 
 }
 .login_box button {
   width: 100px;

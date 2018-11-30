@@ -1,4 +1,6 @@
 const bcrypt = require("bcryptjs");
+const axios = require("axios");
+const {MARS}= process.env
 
 module.exports = {
   async createUser(req, res) {
@@ -56,8 +58,14 @@ module.exports = {
     const db = req.app.get("db");
     // const { id } = req.params;
     const { text, id } = req.body;
-    console.log(text, id)
+    console.log(text, id);
     let edit = await db.edit_post([text, id, req.session.user.user_id]);
     res.status(200).send(edit);
+  },
+  async mars(req, res) {
+    let mars = await axios.get(
+      `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=${MARS}`
+    );
+    res.status(200).send(mars.data);
   }
 };
