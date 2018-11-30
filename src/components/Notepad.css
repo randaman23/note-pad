@@ -142,13 +142,13 @@ textarea {
   align-items: center;
   /* font-family: 'Cormorant Upright'; */
   font-family: 'Kaushan Script';
-  font-size: 28px;
+  font-size: 24px;
   /* font-weight: bold; */
   opacity: .5;
 }
 .quote_quote{
   height: 10vh;
-  width: 90vw;
+  width: 80vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

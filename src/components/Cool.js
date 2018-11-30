@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./Cool.css";
+import { Link } from "react-router-dom";
 
 class Cool extends Component {
   constructor(props) {
@@ -31,9 +32,22 @@ class Cool extends Component {
     });
     return (
       <div className="cool_main">
-        <div className="home_header">
-          <span>Thought Jottr with Mars</span>
+        <div className="cool_header">
+          <div className="jotter_mars">
+            <span>ThoughtJottr</span>
+            <Link to="/login">
+              <p>Sign In</p>
+            </Link>
+            <Link to="/register">
+              <p>Register</p>
+            </Link>
+            <Link to="/">
+              <p>Home</p>
+            </Link>
+          </div>
         </div>
+        <div className="pushdown_mars" />
+        <div className="info_mars">Images of Mars From Nasa</div>
         <div className="pushdown_mars" />
         <div className="mars_pics">{images}</div>
       </div>

@@ -1,27 +1,96 @@
-.cool_main img{
-    width: 36vw;
-    transition: transform .2s;
-    border-radius: 3px;
+.cool_main img {
+  width: 36vw;
+  transition: transform 0.2s;
+  border-radius: 3px;
 }
 .cool_main img:hover{
-    transform: scale(1.5);
-    /* margin: -100px; */
+  transform: scale(1.5);
+  /* margin: -100px; */
 }
-.mars_pics{
+.mars_pics {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #d4d4d4;
+}
+.pushdown_mars {
+  height: 13vh;
+}
+.cool_main {
+  height: 100vh;
+  width: 100vw;
+  background: #d4d4d4;
+}
+.mars_pics p {
+  font-family: "Merriweather";
+}
+.cool_header {
+  height: 12vh;
+  width: 100vw;
+  position: fixed;
+  border-radius: 2px;
+  z-index: 5;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  font-size: 24px;
+  border-bottom: 1px solid #d4d4d4;
+}
+.cool_header span {
+  font-family: "Merriweather";
+  font-size: 32px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #393939;
+  opacity: 0.7;
+  margin-left: -25px;
+}
+.jotter_mars {
+  height: 12vh;
+  width: 100vw;
+  position: fixed;
+  border-radius: 2px;
+  z-index: 5;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  font-size: 24px;
+  background: #f4f4f4;
+}
+.cool_header a {
+  width: 100px;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Merriweather";
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #393939;
+  opacity: 0.5;
+  /* border: 1px solid; */
+  border-radius: 3px;
+}
+.cool_header a:hover {
+  background: #3b7dd8;
+  color: #ededed;
+}
+.info_mars{
+    height: 5vh;
+    width: 100vw;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
+    font-family: 'Merriweather';
+    font-size: 24px;
+    opacity: .5;
+    margin-bottom: 10px;
+    position: fixed;
 }
-.pushdown_mars{
-    height: 23vh;
-  }
-  .cool_main{
-      height: 100vh;
-      width: 100vw;
-      background:#FFFFFF;
-  }
-  .mars_pics p{
-      font-family: 'Merriweather'
-  }
