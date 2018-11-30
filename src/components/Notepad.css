@@ -140,9 +140,10 @@ textarea {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  font-family: 'Cormorant Upright';
-  font-size: 24px;
-  font-weight: bold;
+  /* font-family: 'Cormorant Upright'; */
+  font-family: 'Kaushan Script';
+  font-size: 28px;
+  /* font-weight: bold; */
   opacity: .5;
 }
 .quote_quote{
@@ -152,4 +153,21 @@ textarea {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+}
+.quote_box button{
+  width: 100px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Merriweather";
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #393939;
+    opacity: 0.5;
+    border: 1px solid;
+    border-radius: 3px;
 }

@@ -116,7 +116,7 @@ class Notepad extends Component {
           <button onClick={() => this.logout()}>Sign Out</button>
         </div>
         <div className="quote_box">
-          <button onClick={this.getQuote}>Quote</button>
+          <button onClick={this.getQuote}>Advice</button>
           <div className="quote_quote">
             <p>{this.state.advice}</p>
           </div>
