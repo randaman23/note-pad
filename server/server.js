@@ -34,6 +34,7 @@ app.put(`/api/edit`, controller.editPost);
 
 app.get(`/api/mars`, controller.mars);
 app.get(`/api/get-quote`, controller.getQuote)
+// app.get(`/api/space-photo`, controller.getSpace)
 
 app.listen(SERVER_PORT, () => {
   console.log(`Hoi from port ${SERVER_PORT}`);

@@ -18,12 +18,12 @@ class Home extends Component {
           <Link to="/register">
             <p>Register</p>
           </Link>
-        </div>
-        <div className="below">
-          <Link to="/cool">
+          {/* <Link to="/cool">
             <p>Mars</p>
-          </Link>
+          </Link> */}
         </div>
+        {/* <div className="below">
+        </div> */}
       </div>
     );
   }

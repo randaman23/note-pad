@@ -19,6 +19,16 @@ class Cool extends Component {
       });
     });
   }
+  // getSpace(){
+  //   axios.get(`/api/space-photo`).then(res => {
+  //     console.log(res.data)
+  //   })
+  // }
+  async logout() {
+    let res = await axios.get(`auth/logout`);
+    console.log(res);
+    this.props.history.push("/");
+  }
 
   render() {
     console.log(this.state.photo, this.state.advice);
@@ -35,20 +45,22 @@ class Cool extends Component {
         <div className="cool_header">
           <div className="jotter_mars">
             <span>ThoughtJottr</span>
-            <Link to="/login">
+            {/* <Link to="/login">
               <p>Sign In</p>
             </Link>
             <Link to="/register">
               <p>Register</p>
+            </Link> */}
+            <Link to="/notepad">
+              <p>Notes</p>
             </Link>
-            <Link to="/">
-              <p>Home</p>
-            </Link>
+            <button onClick={() => this.logout()}>Sign Out</button>
           </div>
         </div>
         <div className="pushdown_mars" />
         <div className="info_mars">Images of Mars From Nasa</div>
-        <div className="pushdown_mars" />
+        {/* <div className="pushdown_mars" /> */}
+        {/* <button onClick={(e) => this.getSpace(e)}>space</button> */}
         <div className="mars_pics">{images}</div>
       </div>
     );

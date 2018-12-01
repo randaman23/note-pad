@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
 const axios = require("axios");
-const {MARS}= process.env
+const { MARS } = process.env;
 
 module.exports = {
   async createUser(req, res) {
@@ -69,7 +69,13 @@ module.exports = {
     res.status(200).send(mars.data);
   },
   async getQuote(req, res) {
-    let quote = await axios.get('https://api.adviceslip.com/advice')
-    res.status(200).send(quote.data)
-  }
+    let quote = await axios.get("https://api.adviceslip.com/advice");
+    res.status(200).send(quote.data);
+  },
+  // async getSpace(req, res) {
+  //   let space = await axios.get(
+  //     `GET https://api.nasa.gov/planetary/apod?api_key=${MARS}`
+  //   );
+  //   res.status(200).send(space);
+  // }
 };

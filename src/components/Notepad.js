@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Notepad.css";
 import { Icon } from "antd";
 import _ from "lodash";
+import {Link} from 'react-router-dom'
 
 class Notepad extends Component {
   constructor(props) {
@@ -113,6 +114,9 @@ class Notepad extends Component {
         <div className="note_header">
           <h1>Thought Jottr</h1>
           {/* <button>Note Graveyard</button> */}
+          <Link to="/cool">
+            <p>Mars</p>
+          </Link>
           <button onClick={() => this.logout()}>Sign Out</button>
         </div>
         <div className="quote_box">
