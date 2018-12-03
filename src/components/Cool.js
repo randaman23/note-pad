@@ -34,9 +34,13 @@ class Cool extends Component {
     console.log(this.state.photo, this.state.advice);
     let images = this.state.photo.map((e, i) => {
       return (
-        <div key={i}>
+        <div className="rover_imgs" key={i}>
           <img src={e.img_src} alt="" />
+          <p>Camera Name: {e.camera.name}</p>
           <p>Earth Date When Taken: {e.earth_date}</p>
+          <p>Landing Date: {e.rover.landing_date}</p>
+          <p>Launch Date: {e.rover.launch_date}</p>
+          <p>Max Date: {e.rover.max_date}</p>
         </div>
       );
     });
