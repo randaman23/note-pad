@@ -62,7 +62,7 @@ class Cool extends Component {
           </div>
         </div>
         <div className="pushdown_mars" />
-        <div className="info_mars">Images of Mars From Nasa</div>
+        <div className="info_mars">Mars Rover Images from 33 Million Miles Away!</div>
         {/* <div className="pushdown_mars" /> */}
         {/* <button onClick={(e) => this.getSpace(e)}>space</button> */}
         <div className="mars_pics">{images}</div>
