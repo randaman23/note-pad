@@ -10,3 +10,7 @@ Integrated the Nasa Api for images and information from the Mars rovers.
 The Place for all your Thoughts.
 
 ![image](https://user-images.githubusercontent.com/40444375/51637482-2ceec600-1f19-11e9-9bea-7fe84b5fc2d6.png)
+
+<img width="1440" alt="screen shot 2018-12-07 at 8 49 42 am" src="https://user-images.githubusercontent.com/40444375/51637654-9cfd4c00-1f19-11e9-999d-1155741d373d.png">
+
+<img width="1440" alt="screen shot 2018-12-07 at 8 50 32 am" src="https://user-images.githubusercontent.com/40444375/51637667-a25a9680-1f19-11e9-9382-3220127edd21.png">
